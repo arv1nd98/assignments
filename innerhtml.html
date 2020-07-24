@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+function calc() {
+
+var a=document.getElementById('t1').value;
+var b=document.getElementById('t2').value;
+var sum= parseInt(a) + parseInt(b);
+
+
+document.getElementById('t3').value=sum;
+
+document.getElementById('pid').innerHTML=sum;
+
+}	
+
+
+</script>
+
+
+</head>
+<body>
+
+<input type="text" id="t1">
+<input type="text" id="t2">
+
+<input type="text" id="t3">
+
+<p id="pid">  test</p>
+
+
+<input type="submit" value="Add" onclick="calc()">
+
+</body>
+</html>
