@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+ 
+function test(e)
+{ 
+if(!( e.which >= 97 && e.which <=122 ))
+{
+e.preventDefault(); 
+}
+}
+
+function test1(e)
+{ 
+if(!( e.which >= 97 && e.which <=122 ||e.which >= 65 && e.which <=90 ))
+{
+e.preventDefault(); 
+}
+}
+
+function generateFullName()
+   {
+        document.getElementById('txtFullName').value = 
+        document.getElementById('fName').value + ' ' + 
+        document.getElementById('lName').value;
+
+   }
+</script>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<style type="text/css">
+  .grab {cursor: -webkit-grab; cursor: grab;}
+  #containter:active img {display: none}
+</style>
+</head>
+<body>
+
+<h1>Players Stats</h1>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th colspan="2">Goals/assists</th>
+    <th>contributions</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Messi</td>
+    <td>Goals</td>
+    <td>700</td>
+    <td rowspan="2">1000</td>
+  </tr>
+  <tr>
+    <td>Assists</td>
+    <td>300</td>
+  </tr>
+   <tr>
+    <td rowspan="2">Ronaldo</td>
+    <td>Goals</td>
+    <td>730</td>
+    <td rowspan="2">998</td>
+  </tr>
+  <tr>
+    <td>Assists</td>
+    <td>268</td>
+  </tr>
+</table>
+
+ <br>
+
+ Small cases only <input type="text" id="mytxt" onkeypress ="test(event)">
+ <br><br>
+ Small and Cap cases only <input type="text" id="mytxt" onkeypress ="test1(event)">
+<br>
+ change cursor <input type="submit" class="grab">
+ <br>
+ <br>
+ <div id="containter">
+<img src="messi.jpg" onclick="containter">
+</div>
+ <br>
+ <br>
+ First Name <input type="text" id="fName"  />
+Last Name <input type="text" id="lName" oninput="generateFullName()" /><br/><br>
+Full name  <input type="text" id="txtFullName" name="txtFullName"  > <br><br>
+</body>
+
+</html>
