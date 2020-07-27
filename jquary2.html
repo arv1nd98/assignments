@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function()
+{
+	$('#Show').click(function()
+	{
+   		$('#imgDiv').show();
+	});
+  	$('#Hide').click(function(){
+   		$('#imgDiv').hide();
+	});
+});
+</script>
+</head>
+<body>
+<div id="imgDiv">
+	<img src="messi.jpg">
+</div>
+<button type="button" id="Hide">Hide</button>
+<button type="button" id="Show">Show</button>
+
+</body>
+</html>
