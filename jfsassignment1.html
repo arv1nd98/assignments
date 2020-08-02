@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body{
+      background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 17%, rgba(0,212,255,1) 100%);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    types=["Select any one","Graduation",'Post-Graduation'];
+
+
+function filldd()
+{
+var typeDD=document.getElementById('type');
+for(i=0;i<types.length;i++){
+var ele=document.createElement('option');
+ele.text=types[i];
+typeDD.add(ele,i+1)
+}
+}
+
+
+   data=[['IT','CSE','ECE','MECH'],['M.E','M.S','M.A'],
+   ['Master in arts','Master in physics','Master in chemistry' ]];
+
+
+function fillData()
+{
+var typeDDN=document.getElementById('type');
+  var selectedIdx= typeDDN.selectedIndex;
+
+console.log(selectedIdx);
+
+var dataDD=document.getElementById('dd');
+
+dataDD.innerText=null;
+
+
+for(i=0;i<data[selectedIdx-1].length;i++)
+{
+
+var ele=document.createElement('option');
+ele.text=data[selectedIdx-1][i];
+
+dataDD.add(ele,i+1)
+
+
+}
+
+
+}
+  function test(e)
+    {
+      if (!(e.which >=97 && e.which <=122 || e.which >=65 && e.which <=90))
+        {
+          e.preventDefault();
+        }
+    }
+     function checkPassword(form) { 
+                password1 = form.password1.value; 
+                password2 = form.password2.value; 
+  
+                 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                 
+                else if (password2 == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                     
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                 
+                else{ 
+                    alert("Password Match: Welcome to GeeksforGeeks!") 
+                    return true; 
+                } 
+            }
+    </script>
+    <script src="datevalidate.js"></script>
+</head>
+<body onload="filldd()">
+  <p align="center">
+  REGISTRATION FORM
+   </p>
+ <form onSubmit = "return checkPassword(this)"> 
+        <table border = 1 align = "center"> 
+            <tr> 
+            
+                <td><i class="fa fa-user-circle-o" aria-hidden="true"> Username </i></td> 
+                <td><input type = text name = name size = 25 onkeypress="test(event)" required></td> 
+            </tr> 
+            <tr> 
+               <td> <i class="fa fa-key" aria-hidden="true"></i> Password </i> </td> 
+                <td><input type = password name = password1 size = 25 required></td> 
+            </tr> 
+            <tr> 
+                <td> <i class="fa fa-unlock" aria-hidden="true"> Confirm Password </i></td> 
+                <td><input type = password name = password2 size = 25 required></td> 
+  </tr> 
+ <tr>       
+<td> <select id="type" onchange="fillData()" required>
+</select></td>
+<td>
+<select id="dd" required>
+<option>select</option>
+</select></td>
+</tr>
+  <tr>
+
+  <td><i class="fa fa-envelope" aria-hidden="true"> EmailId </i></td>
+
+  <td><input type="text" name="emailid" id="emailid" size="30" required></td>
+
+  </tr>
+
+
+<tr>
+
+  <td><i class="fa fa-calendar" aria-hidden="true"> DOB </i></td>
+
+  <td><input type="date" name="dob" id="dob" size="30" max="2002-01-01" required></td>
+
+  </tr>
+
+
+<tr>
+
+  <td><i class="fa fa-mobile" aria-hidden="true"> MobileNo </i></td>
+
+  <td><input type="text" name="mobileno" id="mobileno" size="30" required></td>
+
+  </tr>
+
+   <tr> 
+                <td colspan = 2 align = right> 
+                <input type = submit value = "Submit" > </td> 
+            </tr> 
+
+        </table> 
+        </form> 
+</body>
+</html>
