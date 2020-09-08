@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p align="center">
+  REGISTRATION FORM
+   </p>
+ <form method="get" action="RegisterServlet"> 
+        <table border = 1 align = "center"> 
+            <tr> 
+                <td> Employee name </td> 
+                <td><input type = "text" name = "name"  required></td> 
+            </tr> 
+              <tr> 
+                <td> Employee Id </td> 
+                <td><input type = "text" name = "Id"  required></td> 
+            </tr> 
+            <tr> 
+               <td>  Password </td> 
+                <td><input type = "password" name = "password1" size = 25 required></td> 
+            </tr> 
+            <tr> 
+                <td>  Confirm Password</td> 
+                <td><input type = "password" name = "password2" size = 25 required></td> 
+  </tr> 
+   <tr> 
+                <td> Address</td> 
+                <td><input type= "text" name ="address" size = 25 required></td> 
+  </tr>
+  <tr>
+  <td> Date of Birth </td>
+  <td> <input type="date" name="DOB" required> </td>  
+  </tr>
+   <tr>
+  <td> Gender </td>
+  <td> <input type="radio" id="male" name="Gender">
+      <input type="radio" id="female" name="Gender" >
+   </td>  
+   <tr> </tr>
+  </tr>
+  <tr>
+  <td>LanguagesKnown</td>
+  <td>Tamil<input type="checkbox" value="Tamil" name="LanguagesKnown">
+English<input type="checkbox" value="English" name="LanguagesKnown">
+French<input type="checkbox" value="French" name="LanguagesKnown">
+  </td>
+  </tr>
+ <tr> 
+  <td><label for="SecurityQuestions">Select Security Question:</label></td>
+ <td><select name="SecurityQuestions" id="SecurityQuestions"></td>
+ <option value="ques1">Who is your favourite Football player?</option>
+ <option value="ques2">What is your favourite Football team?</option>
+ <option value="ques3">Where is your dream destination?</option>
+</select>
+</tr>
+<tr> 
+                <td> Security Answers</td> 
+                <td><input type= "text" name ="answers" size = 25 required></td> 
+  </tr>
+   <tr> 
+                <td colspan = 2 align = right> 
+                <input type = submit value = "Submit" > </td> 
+            </tr> 
+
+        </table> 
+        </form> 
+</body>
+</html>
